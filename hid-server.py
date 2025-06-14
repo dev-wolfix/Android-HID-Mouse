@@ -24,15 +24,18 @@ if __name__ == "__main__":
 
     while True:
         client, addr = s.accept()
-        if DEBUG: print(f"Connection from {addr}")
+        if DEBUG:
+            print(f"Connection from {addr}")
         with client:
             while True:
                 data = client.recv(1024)
-                if not data: break
+                if not data:
+                    break
                 cmd = data.decode().strip().split()
                 if len(cmd) == 3 and cmd[0].upper() == "MOVE":
                     try:
-                        if DEBUG: print(f"Moving to ({int(cmd[1])}, {int(cmd[2])})")
+                        if DEBUG:
+                            print(f"Moving to ({int(cmd[1])}, {int(cmd[2])})")
                         move_to(int(cmd[1]), int(cmd[2]))
                         client.sendall(b"OK\n")
                     except ValueError:
