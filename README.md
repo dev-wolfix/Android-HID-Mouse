@@ -11,7 +11,7 @@ Allows you to simulate a mouse using your phone via a socket connection. Useful 
 **Click on "Set USB Function"**
 
 ## Run socket server
-**Go to termux and run python script
+**Go to termux and run python script**
 
 ```
 python3 hid-server.py
