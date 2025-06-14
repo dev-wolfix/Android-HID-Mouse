@@ -11,6 +11,7 @@ Allows you to simulate a mouse using your phone via a socket connection. Useful 
 **Click on "Set USB Function"**
 
 <br>
+
 ## Run socket server
 **Go to termux and run python script**
 
